@@ -1,3 +1,11 @@
 <h1>
   {{title}}
 </h1>
+<ul>
+  <li *ngFor='let empresa of empreses | async'>
+    {{ empresa.nom }}
+  </li>
+</ul>
+<p *ngIf=' selected | async as empresaSeleccionada '>
+    {{ empresaSeleccionada.nom }} seleccionada
+</p> 
